@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise</title>
+</head>
+<body>
+<button id="changeTextButton">Click me to change the text below!</button>
+<p id="sampleText">This is the original text.</p>
+
+<script>
+
+    alert('this is an alert')
+    function changeText() {
+        document.getElementById("sampleText").innerText = "The text has been changed!";
+    }
+
+    document.getElementById("changeTextButton").onclick = changeText;
+</script>
+
+
+<p id="dynamic content">Original content</p>
+<button id="changeContentButton">Click me to change the content above!</button>
+
+<script>
+    document.getElementById("changeContentButton").onclick = function() {
+        document.getElementById("dynamic content").innerText = "The content has been changed!";
+    }
+    </script>
+<br><br>
+    <div>
+        <input type = "text" id = "userName" placeholder = "Enter your name">
+    <p id="greeting">Hello, stranger!</p>
+    <button id ="changeGreeting">Submit</button>
+
+<<script>
+        document.getElementById("changeGreeting").addEventListener("click", function() {
+            let userName = document.getElementById("userName").value;
+            if (userName.trim()) {  // Check if input is not empty
+                document.getElementById("greeting").innerText = "Hello, " + userName + "!";
+            } else {
+                document.getElementById("greeting").innerText = "Hello, stranger!";
+            }
+        });
+    </script>
+</script>
+</div>
+
+</body>
+</html>
